@@ -104,7 +104,7 @@ def add_task():
         task = {
             "category_name": request.form.get("category_name"),
             "task_name": request.form.get("task_name"),
-            "task_description": request.form.get("task_description"),
+            "task_description": request.form.get("task_description"), #request.form.getlist() used for array of multi items like a recipe
             "is_urgent": is_urgent,
             "due_date": request.form.get("due_date"),
             "created_by": session["user"]
